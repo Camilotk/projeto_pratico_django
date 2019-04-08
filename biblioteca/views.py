@@ -9,5 +9,5 @@ class LivroForm(ModelForm):
 
 def livro_list(request, template_name='list.html'):
     livro = Livro.objects.all()
-    livros = {'lista': livro}
-    return render(request, template_name, livros)
+#    livros = {'lista': livro}
+    return render(request, template_name, {"lista": livro})
